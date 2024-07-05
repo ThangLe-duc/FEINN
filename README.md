@@ -8,3 +8,4 @@ Thang Le-Duc, Deep Learning Architecture Research Center, Sejong University, ema
 
 # Reference
 Le-Duc, T., Nguyen-Xuan, H., & Lee, J. (2023). A finite-element-informed neural network for parametric simulation in structural mechanics. Finite Elements in Analysis and Design, 217, 103904.
+https://www.sciencedirect.com/science/article/pii/S0168874X22001779
