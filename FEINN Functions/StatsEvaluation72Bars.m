@@ -32,5 +32,5 @@ Test.aRRMSE = 1/N*sum(sqrt(sum((yfDenorm(:,13-problem.nDOFelim:nDOFactive) - tar
 [K,F,E] = Stiffness_Force_72BarsForce_Batch_True(input,M,problem);
 predValReshape = reshape(yfPredScaled,[],1,M);
 FEIResErr = DPIResidual_Batch(K, predValReshape, F, M);
-FEIRes.Err = 1/M*sqrt(M/E*FEIResErr);
+FEIRes.Err = 1/(M*E)*sqrt(M*FEIResErr);
 end

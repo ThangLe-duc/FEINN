@@ -31,7 +31,7 @@ Test.aRRMSE = 1/N*sum(sqrt(sum((yfDenorm(:,3:nDOFactive+2) - targetTrue(:,3:nDOF
 [K,F,E] = Stiffness_Force_BernBeam_Batch_True(input,M,problem.XScale,50);
 predValReshape = reshape(yfPredScaled,[],1,M);
 FEIResErr = DPIResidual_Batch(K, predValReshape, F, M);
-FEIRes.Err = 1/M*sqrt(M/E*FEIResErr);
+FEIRes.Err = 1/(M*E)*sqrt(M*FEIResErr);
 
 % Calculate boundary error
 nDOFprescribed = size(DOFprescribed,2);

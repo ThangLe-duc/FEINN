@@ -25,7 +25,7 @@ Test.aRRMSE = 1/N*sum(sqrt(sum((yfDenorm(:,1:nDOFactive) - targetTrue(:,1:nDOFac
 [K,F,E] = Stiffness_Force_10Bars_Batch_True(input,M,problem.XScale);
 predValReshape = reshape(yfPredScaled,[],1,M);
 FEIResErr = DPIResidual_Batch(K, predValReshape, F, M);
-FEIRes.Err = 1/M*sqrt(M/E*FEIResErr);
+FEIRes.Err = 1/(M*E)*sqrt(M*FEIResErr);
 
 % Calculate boundary error
 nDOFprescribed = size(DOFprescribed,2);
